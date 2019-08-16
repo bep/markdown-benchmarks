@@ -13,45 +13,54 @@ import (
 	"github.com/russross/blackfriday"
 )
 
-func BenchmarkGoldMark(b *testing.B) {
-	b.ResetTimer()
-	source, err := ioutil.ReadFile("_data.md")
-	if err != nil {
-		panic(err)
-	}
-	markdown := goldmark.New(
-		goldmark.WithRendererOptions(html.WithXHTML(), html.WithUnsafe()),
-	)
-	var out bytes.Buffer
-	markdown.Convert([]byte(""), &out)
-
-	for i := 0; i < b.N; i++ {
-		out.Reset()
-		if err := markdown.Convert(source, &out); err != nil {
-			panic(err)
+func BenchmarkMarkdown(b *testing.B) {
+	b.Run("Blackfriday-v2", func(b *testing.B) {
+		r := func(src []byte) ([]byte, error) {
+			out := blackfriday.Run(src)
+			return out, nil
 		}
-	}
+		doBenchmark(b, r)
+	})
+
+	b.Run("GoldMark", func(b *testing.B) {
+		markdown := goldmark.New(
+			goldmark.WithRendererOptions(html.WithXHTML(), html.WithUnsafe()),
+		)
+		r := func(src []byte) ([]byte, error) {
+			var out bytes.Buffer
+			err := markdown.Convert(src, &out)
+			return out.Bytes(), err
+		}
+		doBenchmark(b, r)
+	})
+
+	b.Run("CommonMark", func(b *testing.B) {
+		md := markdown.New(markdown.XHTMLOutput(true))
+		r := func(src []byte) ([]byte, error) {
+			var out bytes.Buffer
+			err := md.Render(&out, src)
+			return out.Bytes(), err
+		}
+		doBenchmark(b, r)
+	})
 }
 
-func BenchmarkGolangCommonMark(b *testing.B) {
-	b.ResetTimer()
+// The different frameworks have different APIs. Create an adapter that
+// should behave the same in the memory department.
+func doBenchmark(b *testing.B, render func(src []byte) ([]byte, error)) {
+	b.StopTimer()
 	source, err := ioutil.ReadFile("_data.md")
 	if err != nil {
-		panic(err)
+		b.Fatal(err)
 	}
-	md := markdown.New(markdown.XHTMLOutput(true))
+	b.StartTimer()
 	for i := 0; i < b.N; i++ {
-		md.RenderToString(source)
-	}
-}
-
-func BenchmarkBlackFriday(b *testing.B) {
-	b.ResetTimer()
-	source, err := ioutil.ReadFile("_data.md")
-	if err != nil {
-		panic(err)
-	}
-	for i := 0; i < b.N; i++ {
-		blackfriday.Run(source)
+		out, err := render(source)
+		if err != nil {
+			b.Fatal(err)
+		}
+		if len(out) < 100 {
+			b.Fatal("No result")
+		}
 	}
 }

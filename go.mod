@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	github.com/russross/blackfriday v2.0.0+incompatible
+	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/yuin/goldmark v1.0.9
 	gitlab.com/golang-commonmark/html v0.0.0-20180917080848-cfaf75183c4a // indirect
