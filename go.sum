@@ -1,9 +1,9 @@
 github.com/gomarkdown/markdown v0.0.0-20190802011031-b3dd8ce84a34 h1:ReCH/CAy9I/3I5kTaIi68r8Fcf50MEs//X1y9S29KMU=
 github.com/gomarkdown/markdown v0.0.0-20190802011031-b3dd8ce84a34/go.mod h1:JDGcbDT52eL4fju3sZ4TeHGsQwhG9nbDV21aMyhwPoA=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/russross/blackfriday v1.5.3-0.20190616195246-a925a152c144 h1:DSnT5th1+S65UVOwp617oI2lNQ01UFeoArsU8c2b6h0=
 github.com/russross/blackfriday v1.5.3-0.20190616195246-a925a152c144/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR/rfWxYHBV53g=
-github.com/russross/blackfriday v2.0.0+incompatible h1:cBXrhZNUf9C+La9/YpS+UHpUT8YD6Td9ZMSU9APFcsk=
-github.com/russross/blackfriday v2.0.0+incompatible/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR/rfWxYHBV53g=
 github.com/russross/blackfriday/v2 v2.0.1 h1:lPqVAte+HuHNfhJ/0LC98ESWRz8afy9tM/0RK8m9o+Q=
 github.com/russross/blackfriday/v2 v2.0.1/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/shurcooL/sanitized_anchor_name v1.0.0 h1:PdmoCO6wvbs+7yrJyMORt4/BmY5IYyJwS/kOiWx8mHo=
@@ -20,6 +20,8 @@ gitlab.com/golang-commonmark/mdurl v0.0.0-20180912090424-e5bce34c34f2 h1:wD/sPUg
 gitlab.com/golang-commonmark/mdurl v0.0.0-20180912090424-e5bce34c34f2/go.mod h1:wQk4rLkWrdOPjUAtqJRJ10hIlseLSVYWP95PLrjDF9s=
 gitlab.com/golang-commonmark/puny v0.0.0-20180912090636-2cd490539afe h1:5kUPFAF52umOUPH12MuNUmyVTseJRNBftDl/KfsvX3I=
 gitlab.com/golang-commonmark/puny v0.0.0-20180912090636-2cd490539afe/go.mod h1:P9LSM1KVzrIstFgUaveuwiAm8PK5VTB3yJEU8kqlbrU=
+gitlab.com/opennota/wd v0.0.0-20180912061657-c5d65f63c638 h1:uPZaMiz6Sz0PZs3IZJWpU5qHKGNy///1pacZC9txiUI=
+gitlab.com/opennota/wd v0.0.0-20180912061657-c5d65f63c638/go.mod h1:EGRJaqe2eO9XGmFtQCvV3Lm9NLico3UhFwUpCG/+mVU=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
 golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
