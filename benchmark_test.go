@@ -10,7 +10,7 @@ import (
 
 	"gitlab.com/golang-commonmark/markdown"
 
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday"
 )
 
 func BenchmarkGoldMark(b *testing.B) {
