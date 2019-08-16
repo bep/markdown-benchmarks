@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/gomarkdown/markdown v0.0.0-20190802011031-b3dd8ce84a34
-	github.com/russross/blackfriday v2.0.0+incompatible
+	github.com/russross/blackfriday v1.5.3-0.20190616195246-a925a152c144
 	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/yuin/goldmark v1.0.9

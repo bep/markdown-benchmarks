@@ -10,13 +10,22 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 	"gitlab.com/golang-commonmark/markdown"
 
-	"github.com/russross/blackfriday"
+	bf1 "github.com/russross/blackfriday"
+	bf2 "github.com/russross/blackfriday/v2"
 )
 
 func BenchmarkMarkdown(b *testing.B) {
+	b.Run("Blackfriday-v1", func(b *testing.B) {
+		r := func(src []byte) ([]byte, error) {
+			out := bf1.MarkdownBasic(src)
+			return out, nil
+		}
+		doBenchmark(b, r)
+	})
+
 	b.Run("Blackfriday-v2", func(b *testing.B) {
 		r := func(src []byte) ([]byte, error) {
-			out := blackfriday.Run(src)
+			out := bf2.Run(src)
 			return out, nil
 		}
 		doBenchmark(b, r)
