@@ -5,9 +5,9 @@ import (
 	"io/ioutil"
 	"testing"
 
+	gomarkdown "github.com/gomarkdown/markdown"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/renderer/html"
-
 	"gitlab.com/golang-commonmark/markdown"
 
 	"github.com/russross/blackfriday"
@@ -40,6 +40,14 @@ func BenchmarkMarkdown(b *testing.B) {
 			var out bytes.Buffer
 			err := md.Render(&out, src)
 			return out.Bytes(), err
+		}
+		doBenchmark(b, r)
+	})
+
+	b.Run("GoMarkdown", func(b *testing.B) {
+		r := func(src []byte) ([]byte, error) {
+			out := gomarkdown.ToHTML(src, nil, nil)
+			return out, nil
 		}
 		doBenchmark(b, r)
 	})
