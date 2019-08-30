@@ -8,7 +8,7 @@ require (
 	github.com/russross/blackfriday v1.5.3-0.20190616195246-a925a152c144
 	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
-	github.com/yuin/goldmark v1.0.9
+	github.com/yuin/goldmark v1.1.0
 	gitlab.com/golang-commonmark/html v0.0.0-20180917080848-cfaf75183c4a // indirect
 	gitlab.com/golang-commonmark/linkify v0.0.0-20180917065525-c22b7bdb1179 // indirect
 	gitlab.com/golang-commonmark/markdown v0.0.0-20181102083822-772775880e1f

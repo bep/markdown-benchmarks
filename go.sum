@@ -10,6 +10,8 @@ github.com/shurcooL/sanitized_anchor_name v1.0.0 h1:PdmoCO6wvbs+7yrJyMORt4/BmY5I
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/yuin/goldmark v1.0.9 h1:xafLRT/Vv6OjEwvwVeh+Xu2Kw1bYzTynXUZpLjrLyME=
 github.com/yuin/goldmark v1.0.9/go.mod h1:hDgn8A2EV4OniExoeJs1fSrmEc/T7w8+Teyq8YkThxQ=
+github.com/yuin/goldmark v1.1.0 h1:Z5ZerZZLUdCBKw7nhz0z14LMkpPvHmo7j2MdbzD39LI=
+github.com/yuin/goldmark v1.1.0/go.mod h1:hDgn8A2EV4OniExoeJs1fSrmEc/T7w8+Teyq8YkThxQ=
 gitlab.com/golang-commonmark/html v0.0.0-20180917080848-cfaf75183c4a h1:Ax7kdHNICZiIeFpmevmaEWb0Ae3BUj3zCTKhZHZ+zd0=
 gitlab.com/golang-commonmark/html v0.0.0-20180917080848-cfaf75183c4a/go.mod h1:JT4uoTz0tfPoyVH88GZoWDNm5NHJI2VbUW+eyPClueI=
 gitlab.com/golang-commonmark/linkify v0.0.0-20180917065525-c22b7bdb1179 h1:rbON2KwBnWuFMlSHM8LELLlwroDRZw6xv0e6il6e5dk=
